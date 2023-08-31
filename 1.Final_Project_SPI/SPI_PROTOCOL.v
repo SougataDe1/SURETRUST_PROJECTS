@@ -1,17 +1,17 @@
 
 `timescale 1ns / 1ps
 module spi(
-output     spi_cs_l,      //SPI Active-low chip select
-output     spi_sclk,      // SPI bus clock
-output     spi_data,      // SPI bus data
+output     spi_cs_l,   
+output     spi_sclk,   
+output     spi_data,   
 output [4:0]counter,
-input      clk,           // System clock
-input      reset,         // Asynchronous system reset
-input      [15:0] datain // Binary input vector
+input      clk,        
+input      reset,      
+input      [15:0] datain
 );
-reg [15:0] MOSI;     // SPI shift register
-reg [4:0] count;     // Control counter
-reg cs_l;            // SPI chip select (active-low)
+reg [15:0] MOSI;     
+reg [4:0] count;     
+reg cs_l;            
 reg sclk; 
 reg [2:0]state;
 
